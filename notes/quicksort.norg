@@ -1,0 +1,14 @@
+* Quicksort
+  - Divide and conquer algorithm
+  ~ Pick a pivot
+  ~ Iterate thru array, putting each element lower than the pivot on the left,
+    and every element greater on the right
+  ~ Divide array into two smaller ones (left and right)
+  ~ Repeat until empty array or array of size 1
+** Time complexity
+   - We go thru all inputs n-times (until every element is in an array by itself)
+   - Every iteration we have a branching factor of 2 (split to left and right array), hence: n/2^k = 1
+   - Therefore: _O(n * log(n))_
+   - NOTE: If elements are reverse sorted and pivot is the last element, 
+     time complexity becomes _O(n^2)_ as you have to sort each individual element
+   - It is somewhere between O(n * log(n)) and O(n^2)

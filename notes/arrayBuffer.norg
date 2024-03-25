@@ -1,0 +1,12 @@
+* Array Buffers
+  - The *head* and *tail* of the list are *indexed-based*
+    _Example_
+    [  NULL  NULL  NULL  [  {elements go here} ]  NULL  NULL  ] → array buffer
+                         ↑                     ↑
+                       head                  tail
+  - To *add* an element, *increment tail* _O(1)_
+  - To *remove* an element, *increment head* _O(1)_
+    NOTE: when you *increment*, you must also *modulo the new index by the length* (this is what makes it *circular*)
+  - If *head == tail* (i.e. your buffer is full) you must *resize*:
+    ~ Create a new larger array buffer
+    ~ Start from the head and copy all elements into new buffer

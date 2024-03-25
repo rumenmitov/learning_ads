@@ -1,0 +1,8 @@
+* Array Lists
+  - *Array lists* are *growable* arrays
+  - They have a *length* and a *capacity*
+  - To push to the list, just insert at length and then increment the length
+  - If the capacity is exceeded just increase it
+  - Retrieving: _O(1)_
+  - Pushing, popping: _O(1)_
+  - Insertion, deletion anywhere except at the end: _O(n)_

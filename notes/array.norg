@@ -1,0 +1,6 @@
+* Array
+  - *array* fixed size contiguous memory space
+  - _Retrieving_ position multiplied by the type size → O(n)
+  - _Insertion_ overwriting value at index → O(n)
+  -- NOTE: aarays cannot grow!
+

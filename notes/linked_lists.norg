@@ -1,0 +1,7 @@
+* Linked Lists
+  - Each *node* contains a *value* and a *pointer* to the next node
+  - We can use *doubly linked lists* to traverse backwards as well
+  - We can use *queues* keep track of last element to speed up operations from the back of the list (this is referred to as the *tail*)
+  - Traversing the linked list is _O(n)_
+  - Prepending, appending, pushing, popping: _O(1)_
+  - Operations in the middle of the list: _O(n)_

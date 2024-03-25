@@ -1,0 +1,49 @@
+* Trees
+** Terminology
+   - *root* start of the tree
+   - *height* the longest path from the root to a child
+   - *binary tree* a tree with at most two children
+   - *binary search tree* a binary tree with a specific ordering
+   - *leaf* a node with no children
+   - *balanced tree* all branches have the same height
+   - *branching factor* how many children there are
+** Traversals on Binary Trees
+*** Depth First
+    - *Pre-order traversal* 1) visit node 2) recurse
+    -- NOTE: _root_ is in the beginning
+    - *In-order traversal* 1) recurse left 2) recurse right 3) visit node
+    -- NOTE: _root_ is in the middle
+    -- NOTE: Produces sorted array when applied on *binary search tree*
+    - *Post-order traversal* 1) recurse 2) visit node
+    -- NOTE: _root_ is in the end
+
+    Uses a _stack / vector_ i.e. it is *structure preserving*
+    Time complexity: _O(n)_
+
+*** Breadth First
+    ~ Enqueue node
+    ~ Enqueue node's children
+    ~ Dequeue node 
+    ~ Repeat for next element in queue
+
+    Time complexity: _O(n)_
+
+** Binary Search Tree
+   - Left branch is *recursively* less than or equal to, right is *recursively* greater than the node
+   - Find: between _O( log(n) ) and O(n)_
+   -- O(n) is when all nodes are in a single branch
+   -- n is the *height* of the branch
+   -- Works by just traversing the rules specified above 👆
+   - Insertion: between _O( log(n) ) and O(n)_
+   -- Works by traversing the tree until a *null* is found and inserting the value there
+   - Delettion: between _O( log(n) ) and O(n)_
+   -- Case: no child ⇒ delete node
+   -- Case: one child ⇒ set parent to child; delete node
+   -- Case: two children ⇒ find either a) smallest node on large side or b) largest node on small side; replace it with deleted node
+   --- NOTE: It is preferable to choose either a) or b) depending on the one with the *longest height* ⇒ in order to shrink the tree
+
+** Heap (Priority Queue)
+   - Every *recursive* node is smaller than (*max heap*) or larger than (*min heap*) than the current node
+   -- NOTE: Do not traverse a heap.
+   - It is always *complete* (i.e. all branches on a level have the same height)
+
